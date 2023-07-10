@@ -19,8 +19,8 @@ function App() {
 					className='w-[100px] h-[35px] border-2 border-black rounded-md transition hover:bg-black hover:text-white m-2'
 					onClick={() => setCatsShowed(!isCatsShowed)}
 				>
-					{isCatsShowed ? "Hide cats!" : "Show cats!"}
-				</button> 
+					{isCatsShowed ? 'Hide cats!' : 'Show cats!'}
+				</button>
 				<button
 					className='w-[100px] h-[35px] border-2 border-black rounded-md transition hover:bg-black hover:text-white m-2'
 					onClick={() => dispatch(fetchCatsData())}
@@ -34,7 +34,9 @@ function App() {
 						<CatCard key={cat.id} cat={cat.url} />
 					))}
 				</div>
-			) : <p className='text-2xl mt-[100px] text-center'>Click show cats!!!</p>}
+			) : (
+				<p className='text-2xl mt-[100px] text-center'>Click show cats!!!</p>
+			)}
 		</div>
 	)
 }
