@@ -21,15 +21,9 @@ function App() {
 			<div className='flex flex-wrap items-center justify-center'>
 				<button
 					className='w-[100px] h-[35px] border-2 border-black rounded-md transition hover:bg-black hover:text-white m-2'
-					onClick={() => setCatsShowed(true)}
+					onClick={() => setCatsShowed(!isCatsShowed)}
 				>
-					Show cats!
-				</button>
-				<button
-					className='w-[100px] h-[35px] border-2 border-black rounded-md transition hover:bg-black hover:text-white m-2'
-					onClick={() => setCatsShowed(false)}
-				>
-					Hide cats!
+					{isCatsShowed ? "Hide cats!" : "Show cats!"}
 				</button>
 				<button
 					className='w-[100px] h-[35px] border-2 border-black rounded-md transition hover:bg-black hover:text-white m-2'
