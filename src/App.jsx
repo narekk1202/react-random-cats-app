@@ -12,10 +12,6 @@ function App() {
 		dispatch(fetchCatsData())
 	}, [])
 
-	function otherCats() {
-		dispatch(fetchCatsData())
-	}
-
 	return (
 		<div className='w-full h-full flex items-center justify-center flex-col p-3'>
 			<div className='flex flex-wrap items-center justify-center'>
@@ -24,10 +20,10 @@ function App() {
 					onClick={() => setCatsShowed(!isCatsShowed)}
 				>
 					{isCatsShowed ? "Hide cats!" : "Show cats!"}
-				</button>
+				</button> 
 				<button
 					className='w-[100px] h-[35px] border-2 border-black rounded-md transition hover:bg-black hover:text-white m-2'
-					onClick={otherCats}
+					onClick={() => dispatch(fetchCatsData())}
 				>
 					Other cats!
 				</button>

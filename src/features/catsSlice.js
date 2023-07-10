@@ -19,7 +19,6 @@ export const catsSlice = createSlice({
 		addCat: (state, action) => {
 			return [...state, action.payload]
 		},
-		
 	},
 	extraReducers: builder => {
 		builder.addCase(fetchCatsData.fulfilled, (state, action) => {
