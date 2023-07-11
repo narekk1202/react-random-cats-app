@@ -6,7 +6,7 @@ function CatCard({ cat }) {
 			<img
 				className='w-full h-full flex items-center justify-center rounded-lg'
 				src={cat}
-				alt='Loading...'
+				alt='cat'
 			/>
 		</div>
 	)
