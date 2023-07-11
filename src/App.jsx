@@ -58,7 +58,7 @@ function App() {
 	}
 
 	return (
-		<div className='w-full min-h-screen flex items-center justify-center  flex-col'>
+		<div className='w-full min-h-screen flex items-center justify-center bg-black flex-col'>
 			{cats.length === 0 ? (
 				<Loading />
 			) : (
@@ -70,7 +70,7 @@ function App() {
 									to={`/${category.id}`}
 									onClick={() => fetchByCategory(category.id)}
 									key={nanoid()}
-									className='w-[100px] h-[35px] border-2 border-black flex items-center justify-center rounded-md transition hover:bg-black hover:text-white m-2'
+									className='w-[100px] h-[35px] border-2 border-orange-500 flex items-center justify-center text-white rounded-sm transition hover:bg-transparent hover:text-orange-500 bg-orange-500 m-2'
 								>
 									{category.name}
 								</NavLink>
@@ -90,9 +90,9 @@ function App() {
 					</div>
 					<button
 						onClick={() => loadMore(location.pathname.substring(1))}
-						className='w-[100px] h-[35px] border-2 border-black flex items-center justify-center rounded-md transition hover:bg-black hover:text-white'
+						className='w-[100px] h-[35px] border-2 border-orange-500 flex items-center justify-center text-white rounded-sm transition hover:bg-transparent hover:text-orange-500 bg-orange-500 mb-5'
 					>
-						Load more
+						Load More
 					</button>
 				</>
 			)}

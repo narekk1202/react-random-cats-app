@@ -2,12 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body {
-	padding: 15px;
-}
-
 .active {
 	background-color: black;
-	color: white;
+	color: rgb(249 115 22 / var(--tw-text-opacity));
 }
